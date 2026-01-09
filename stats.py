@@ -1,6 +1,26 @@
 #stats.py will hold all functions pertaining to analyzing books.
 #1/5/2026
 
+def sort_on(items):
+    return items["num"]
+
+def sort_stats(char):
+    char.sort(reverse=True, key=sort_on)
+    return book
+
+
+def convert_list(num_char):
+    char_list = []
+    #temp_dict = {}
+    for letter in num_char:
+        temp_dict = {}
+        letter_sum = num_char[letter]
+        temp_dict["char"] = letter
+        temp_dict["num"] = letter_sum
+        char_list.append(temp_dict)
+        #char_list.append("num" + letter_sum)
+    return char_list
+
 def word_counter(current_book):
     count = 0
     words = current_book.split()
