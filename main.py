@@ -24,8 +24,16 @@ def main():
     print(f"Analyzing book found at books/frankenstein.txt...")
     print("----------- Word Count ----------")
     print(f"Found {num_words} total words.")
-    print(f"----------- Character Count ----------")
-    print(f"First we nest dictionaries in a list: {list_results}")
+    #print(f"----------- Character Count ----------")
+    #print(f"First we nest dictionaries in a list: {list_results}")
+    #I had to peek here, couldn't figure out how to ignore non-alphas and totally forgot the item keyword for printing from the dictionaries.  Don't forget that all of this could have been a separate function!
+    print("--------- Character Count -------")
+    for item in list_results:
+        if not item["char"].isalpha():
+            continue
+        print(f"{item['char']}: {item['num']}")
+
+    print("============= END ===============")
 
 
 main()
